@@ -3,15 +3,29 @@
         <div class="container" >
             <div class="navbar-header">
                 <div class="navbar-buttons">
-                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only">{{ i18n "navToggle" }}</span>
+                    <button id="ChangeToggle" type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <div id="navbar-hamburger">
+                        <span class="sr-only">{{ i18n "navToggle" }}</span>
                         <i class="fas fa-align-justify"></i>
+                      </div>
+                      <div id="navbar-close" class="hidden">
+                        <span class="glyphicon glyphicon-remove"></span>
+                      </div>
                     </button>
+                    <a class="navbar-brand" href="#"><img src="https://hijauanvaldor.com.my/wp-content/uploads/2020/09/logo_250X135.png" alt=""></a>
                 </div>
             </div>
             <!--/.navbar-header -->
 
             <div class="navbar-collapse collapse" id="navigation">
+        
+                  <h3 class="text-uppercase view-sm">{{ .Site.Params.home.title |  safeHTML }}</h3>
+           
+              
+                  
+                  <p class="text-uppercase lead ab view-sm">{{ .Site.Params.home.name |  safeHTML }}</p>
+
+              
                 <ul class="nav navbar-nav">
                   {{ $current := . }}
                   {{ range .Site.Menus.main }}

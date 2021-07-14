@@ -1,5 +1,7 @@
 /* your styles go here */
-
+.view-sm{
+  display: none;
+}
 .box-image-text .image {
   min-height: 200px;
   max-height: 200px;
@@ -30,4 +32,84 @@
     color: white;
   }
   
+}
+
+/*section1*/
+.lll {
+  background: url('../img/ll.png')no-repeat center right; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 80% 80%;
+  background-position-x: 30rem;
+}
+.ll2{
+  min-height: 647px;
+  color: #3A3933; 
+  padding-left: 8rem;
+}
+.ll2 h3{
+  font-size: 3.6rem;
+  font-weight: lighter;
+  color: #989689;
+}
+.aa{
+  font-size: 2rem;
+  font-weight: normal;
+  
+}
+.ab{
+  font-size: 10rem;
+  font-family: Trajan Pro;
+  color: #70A132;
+}
+.ac{
+  font-size: 2.4rem;
+  font-weight: normal;
+}
+.ad{
+  font-size: 3.6rem;
+}
+.col {
+    display: table-cell; /* Make elements inside the container behave like table cells */
+}
+.home-carousel .dark-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #EAEAEA;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+.back-i{
+  position: absolute;
+  left: 25rem;
+  top: 3rem;
+}
+.bg-light-grey{
+  background-color: #EAEAEA;
+
+  height: 100%;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    min-width: 100%;
+    height: auto;
+}
+#home-page .owl-controls{
+    margin-top: 0px; 
+    text-align: right;
+    top: -5rem;
+    padding-right: 7rem;
+    position: relative;
+}
+#home-page .owl-buttons{
+  padding-right: 80%;
+}
+.fa, .fas {
+  font-weight: 700;
+}
+.pad0{
+  padding: 0;
 }

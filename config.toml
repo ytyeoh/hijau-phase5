@@ -180,6 +180,15 @@ paginate = 10
     title = "Testimonials"
     subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
 
+[params.home]
+    enable = true
+    title = "phase 6"
+    subtitle = "FREEHOLD & GUARDED <br>Sungai Bakap"
+    name = "iris"
+    size = "1,365 sqft"
+    type= "SINGLE STOREY <br> TERRACE HOUSE"
+    
+    
 [params.see_more]
     enable = true
     icon = "far fa-file-alt"
