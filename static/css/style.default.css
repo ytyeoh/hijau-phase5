@@ -1126,8 +1126,8 @@ fieldset[disabled] .btn-template-primary.active {
 .owl-carousel .owl-controls .owl-buttons,
 .owl-theme .owl-controls .owl-buttons {
   position: absolute;
-  top: 5px;
-  right: 0;
+  bottom: 5px;
+  left: 0;
 }
 .owl-carousel .owl-controls .owl-buttons div,
 .owl-theme .owl-controls .owl-buttons div {
