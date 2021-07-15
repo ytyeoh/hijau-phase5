@@ -1,4 +1,10 @@
 /* your styles go here */
+.align-center{
+  text-align: center;
+}
+.pad2{
+  padding: 2rem 0;
+}
 .view-sm{
   display: none;
 }
@@ -44,7 +50,7 @@
   background-position-x: 30rem;
 }
 .ll2{
-  min-height: 647px;
+  min-height: 750px;
   color: #3A3933; 
   padding-left: 8rem;
 }
@@ -112,4 +118,69 @@
 }
 .pad0{
   padding: 0;
+}
+
+/*Footer*/
+#footer{
+  color:  #3A3933;
+  font-size: 14px;
+}
+#footer .lead{
+  font-size: 14px;
+}
+#footer .btn{
+  text-transform: capitalize;
+  width:100%;
+  border-radius: 1rem;
+  border-radius: 1.5rem;
+  padding: 1.5rem 1rem;
+  font-size: 13px;
+  background: #70A132;
+  color: white;
+
+}
+#footer input{
+  border-radius: 1.5rem;
+  padding: 2.5rem 1rem;
+}
+#footer ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #DDDBD4;
+  opacity: 1; /* Firefox */
+}
+.btf{
+  font-weight: bolder;
+  font-weight: 900;
+}
+#copyright a{
+  color: #3A3933;
+  text-transform: uppercase;
+}
+#copyright a:hover, a:focus{
+  text-decoration: none;
+}
+#copyright p{
+  font-size: 1rem;
+  left: 3rem;
+}
+#footbar{
+  position: fixed;
+  bottom: 11%;
+  right: 5%;
+}
+#footbar a{
+  border-radius: 2rem;
+  color: white;
+  text-transform: uppercase;
+}
+#footbar a, a:hover, a:focus{
+  color: white;
+  text-decoration: none;
+}
+.primary-back{
+  background-color: #3A3933;
+  padding: 1rem 3rem;
+}
+.secondary-back{
+  background-color: #70A132;
+  padding: 1rem 3rem;
 }

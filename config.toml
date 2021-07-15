@@ -59,6 +59,8 @@ paginate = 10
     url  = "/#specifications"
     weight = 6
 
+
+
 # Top bar social links menu
 
 [[menu.topbar]]
@@ -85,6 +87,7 @@ paginate = 10
     url = "mailto:your@email.com"
     pre = "<i class='fas fa-2x fa-envelope'></i>"
 
+
 [params]
     viewMorePostLink = "/blog/"
     author = "DevCows"
@@ -107,40 +110,35 @@ paginate = 10
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
     style = "default"
 
-    # Since this template is static, the contact form uses www.formspree.io as a
-    # proxy. The form makes a POST request to their servers to send the actual
-    # email. Visitors can send up to a 50 emails each month for free.
-    #
-    # What you need to do for the setup?
-    #
-    # - register your account to https://formspree.io/register
-    # - login and create new form
-    # - set your form's endpoint url under 'formspree_action' below
-    # - upload the generated site to your server
-    # - test a dummy email yourself
-    # - you're done. Happy mailing!
-    #
     # Enable the contact form by entering your Formspree.io endpoint url
-    formspree_action = "https://formspree.io/sample/of/endpoint"
+    formspree_action = "https://formspree.io/f/xleawnny"
     contact_form_ajax = false
 
-    about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
-    copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
+    contact_us = "contact us"
+    email = "enquiries@assasdunia.com"
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
 
     logo = "img/logo.png"
     logo_small = "img/logo-small.png"
-    address = """<p class="text-uppercase"><strong>Universal Ltd.</strong>
-        <br>13/25 New Avenue
-        <br>Newtown upon River
-        <br>45Y 73J
-        <br>England
-        <br>
-        <strong>Great Britain</strong>
-      </p>
-      """
+
+    copyright= "*All drawings and illustrations herein are artist’s impressions only. All plans, specifications, measurements and information contained herein are subject to variations, amendments and changes as may be required by the relevant authorities or project architect without prior notification to purchase and cannot form part of an offer or contract.<br><br>COPYRIGHT © 2021 ASAS DUNIA BERHAD. ALL RIGHTS RESERVED."
+
+    download = "https://abc.com/doanload"
+    book_now = "contact"
+
+[params.add1]
+    name= "Penang Sales Office"
+    text = "Wisma Asas, No.228, Lebuh Chulia,<br>10200 Penang."
+    tel="04-255 9999"
+    fax="04-255 9888"
+[params.add2]
+    name= "Hijauan Hills Sales Gallery"
+    text = "No.2, Jalan Hijauan Hills 3, Hijauan Hills,<br>14120 Simpang Ampat, Penang."
+    tel="04-563 3999"
+    fax="04-563 1999"
+    
 
 [permalinks]
     blog = "/blog/:year/:month/:day/:filename/"
@@ -173,8 +171,8 @@ paginate = 10
     # For more informtion take a look at the README.
 
 [params.testimonials]
-    enable = true
-    # All testimonials are defined in their own files. You can find example items
+    enable = false
+    # All fal are defined in their own files. You can find example items
     # at 'exampleSite/data/testimonials'.
     # For more informtion take a look at the README.
     title = "Testimonials"
@@ -188,7 +186,9 @@ paginate = 10
     size = "1,365 sqft"
     type= "SINGLE STOREY <br> TERRACE HOUSE"
     
-    
+[params.description]
+    title = "Peace and Tranquility, Enclaved in Greenery."   
+    description = "<p>The dream of having a place of your own called home is made a reality with Iris. The single storey terrace homes (Iris) blooms within an established guarded community, Hijauan Valdor, rich with healthy flourishing greens, clusters of linear parks and luxury of space with its low density concept. </p><p>Iris in Hijauan Valdor, situated near the 2nd Penang Bridge for quick access to the Island, while also connected to matured township like Alma, Simpang Ampat, Sungai Bakap, Nibong Tebal and the fast-developing Batu Kawan, all providing easy accessibility to shopping malls, schools, employment, social and other daily needs. </p><p>All this can be yours without breaking your bank!</p>" 
 [params.see_more]
     enable = true
     icon = "far fa-file-alt"
@@ -209,3 +209,5 @@ paginate = 10
     enable = true
     title = "From our blog"
     subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
+
+

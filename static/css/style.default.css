@@ -2505,23 +2505,23 @@ fieldset[disabled] .btn-template-primary.active {
   margin: 0 0 20px;
 }
 #footer {
-  background: #555555;
+  background: #EAEAEA;
   padding: 50px 0;
   color: #999999;
 }
 #footer h1,
 #footer h2,
 #footer h3,
-#footer h4,
 #footer h5,
 #footer h6 {
-  color: #eeeeee;
+  color: #3A3933;
 }
 #footer h4 {
   font-size: 14px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  color: #70A132;
 }
 #footer ul {
   padding-left: 0;
@@ -2601,9 +2601,9 @@ fieldset[disabled] .btn-template-primary.active {
   color: #38a7bb;
 }
 #copyright {
-  background: #333;
-  color: #ccc;
-  padding: 50px 0;
+  background: #EAEAEA;
+  color: #989689;
+  padding-bottom: 10rem;
   font-size: 12px;
   line-height: 28px;
 }
@@ -3181,7 +3181,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 3px solid #D7DECD;
 }
 /* breadcrumbs */
 .breadcrumb {
