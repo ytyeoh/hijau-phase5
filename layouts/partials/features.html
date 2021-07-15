@@ -1,33 +1,22 @@
 {{ if isset .Site.Params "features" }}
 {{ if .Site.Params.features.enable }}
 {{ if gt (len .Site.Data.features) 0 }}
-<section class="bar background-white">
+<section class="bar background-white align-center">
     <div class="container">
-        {{ range $index, $element := sort .Site.Data.features "weight" }}
-        {{ if eq (mod $index 3) 0 }}
         <div class="col-md-12">
             <div class="row">
-        {{ end }}
-                <div class="col-md-4">
-                    <div class="box-simple">
-                        {{ with $element.url }}
-                        <a href="{{ $element.url }}">
-                        {{ end }}
-                            <div class="icon">
-                                <i class="{{ .icon }}"></i>
-                            </div>
-                        {{ with $element.url }}
-                        </a>
-                        {{ end }}
-                        <h3>{{ $element.name | markdownify }}</h3>
-                        <p>{{ $element.description | markdownify }}</p>
+                {{ range $index, $element := sort .Site.Data.features "weight" }}
+                <div class="col-md-2">
+                    <div class="box-fea">
+                        <div class="svg {{ .icon }}">
+                            
+                        </div>
                     </div>
+                    <p>{{ $element.name | markdownify }}</p>
                 </div>
-        {{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.features) 1 )) }}
+                {{ end }}
             </div>
         </div>
-        {{ end }}
-        {{ end }}
     </div>
 </section>
 {{ end }}
