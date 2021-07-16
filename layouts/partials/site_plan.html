@@ -1,0 +1,49 @@
+<section id="site-plan">
+  <div class="row">
+    <div class="col-md-9 pad0">
+      <div id="image-zoom">
+        <img id="map" src="{{ .Site.Params.site_plan.img }}">
+      </div>
+      <div class="zoom-btn">
+        <button type="button" onclick="zoomin()"><i class="fas fa-plus"></i></button>
+        <button type="button" onclick="zoomout()"><i class="fas fa-minus"></i></button>
+      </div>
+    </div>
+    <div class="col-md-3 bg-light-grey pad0 align-center">
+      <h3 class="secondary-text">site plan</h3>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 ">
+            <div class="box-fea card">
+                <div class="svg {{ .Site.Params.site_plan.icon }}"></div>
+            </div>
+            <h4 class="secondary-text">{{ .Site.Params.site_plan.digit | markdownify }}</h4>
+            <p>{{ .Site.Params.site_plan.quantity | markdownify }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6"><img src="{{ .Site.Params.site_plan.map1 }}" alt="" class="img-responsive"></div>
+    <div class="col-md-6"><img src="{{ .Site.Params.site_plan.map2 }}" alt="" class="img-responsive"></div>
+  </div>
+</section>
+<script>
+  var original_width = document.getElementById("map").clientWidth;
+
+  function zoomin() {
+  var myImg = document.getElementById("map");
+  var currWidth = myImg.clientWidth;
+  if (currWidth > 2500) return false;
+  else {
+    myImg.style.width = (currWidth + 100) + "px";
+  }
+}
+
+function zoomout() {
+  var myImg = document.getElementById("map");
+  var currHeight = myImg.clientHeight;
+  var currWidth = myImg.clientWidth;
+  if (currHeight < 600 || currWidth <= original_width ) return false;
+  else {
+    myImg.style.width = (currWidth - 100) + "px";
+  }
+}
+</script>

@@ -142,6 +142,13 @@ paginate = 10
     land_area= "19’x 71.85’"
     built_up = "19’x 43.8’" 
     floor_plan = "img/Floor_plan.png"
+[params.site_plan]
+    img = "img/Site_plan.png"
+    icon = "low-den"
+    digit = "50"
+    quantity = "Units"
+    map1 = "img/map1.png"
+    map2 = "img/map2.png"
   
 
 [permalinks]
