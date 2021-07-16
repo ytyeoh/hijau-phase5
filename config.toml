@@ -138,7 +138,11 @@ paginate = 10
     text = "No.2, Jalan Hijauan Hills 3, Hijauan Hills,<br>14120 Simpang Ampat, Penang."
     tel="04-563 3999"
     fax="04-563 1999"
-    
+[params.floor_plan]
+    land_area= "19’x 71.85’"
+    built_up = "19’x 43.8’" 
+    floor_plan = "img/Floor_plan.png"
+  
 
 [permalinks]
     blog = "/blog/:year/:month/:day/:filename/"
