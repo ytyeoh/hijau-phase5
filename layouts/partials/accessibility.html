@@ -1,0 +1,28 @@
+<section id="accessibility" class="bg-light-grey">
+  <div class="container">
+    <h3 class="secondary-text">accessibility</h3>
+    <p>Driving distance from Hijauan Valdor</p>
+    <div class="row display-flex">
+      {{ range .Site.Params.access.main }}
+        <div class="col-md-6 same-height">
+
+            <div class="row display-flex">
+              <div class="col-md-2 ">
+                <div class="svg {{.icon}}"></div>
+              </div>
+              <div class="col-md-11 ">
+                <h4 class="light-grey-text top-border">{{ .name }}</h4>
+              </div>
+            
+
+            {{range .sub}}
+              <div class="col-md-8">{{.name}}</div>
+              <div class="col-md-3 align-right">+-{{.distance}}</div>
+            {{end}}
+            </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+  
+</section>

@@ -119,6 +119,37 @@ function sliders () {
       afterInit: '',
       lazyLoad: true
     })
+    $('.specifications').owlCarousel({
+      dotsContainer: '#carousel-custom-dots',
+      navigation: true, // Show next and prev buttons
+      navigationText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+      slideSpeed: 2000,
+      paginationSpeed: 1000,
+      items:2,
+      loop:true,
+      center:false,
+      margin:10
+    })
+    $('.gallery').owlCarousel({
+      dotsContainer: '#carousel-custom-dots',
+      navigation: true, // Show next and prev buttons
+      navigationText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+      slideSpeed: 2000,
+      paginationSpeed: 1000,
+      items:2,
+      loop:true,
+      center:false,
+      margin:10,
+      URLhashListener:true,
+      autoplayHoverPause:false,
+      startPosition: 'URLHash',
+      afterInit: function () {
+        // animationsSlider()
+      },
+      afterMove: function () {
+        // animationsSlider()
+      }
+    })
 
     $('.desciption-page').owlCarousel({
       dotsContainer: '#carousel-custom-dots',
@@ -409,3 +440,12 @@ $(function() {
     $('#navbar-close').toggleClass('hidden');  
   });
 });
+
+
+    lightbox.option({
+    resizeDuration: 200,
+    wrapAround: true,
+    fadeDuration: 2000,
+    fitImagesInViewport: true,
+    wrapAround: true,
+    });

@@ -1,4 +1,13 @@
 /* your styles go here */
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
 .vcenter {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -6,6 +15,9 @@
 }
 .align-center{
   text-align: center;
+}
+.align-right{
+  text-align: right;
 }
 .pad2{
   padding: 2rem 0;
@@ -53,6 +65,7 @@
   -o-background-size: cover;
   background-size: 80% 80%;
   background-position-x: 30rem;
+  padding-bottom: 5rem;
 }
 .ll2{
   min-height: 850px;
@@ -237,6 +250,27 @@
   margin: 3rem 0;
   font-size: 8rem;
 }
+/*accessibility*/
+#accessibility{
+  font-size: 2rem;
+  font-weight: normal;
+  padding-bottom: 5rem;
+}
+#accessibility .top-border{
+  border-top: 5px solid white;
+  padding-top: 15px;
+}
+#accessibility h4{
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: normal;
+}
+/*specifications*/
+#specifications .boxsha{
+  box-shadow: 0 0 10px;
+  padding: 3rem;
+  margin: 3rem;
+}
 /*Footer*/
 #footer{
   color:  #3A3933;
@@ -302,6 +336,9 @@
 }
 .secondary-text{
   color: #70A132;
+}
+.light-grey-text{
+  color: #989689;
 }
 .secondary-back{
   background-color: #70A132;

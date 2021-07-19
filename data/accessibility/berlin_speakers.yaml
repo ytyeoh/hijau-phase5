@@ -1,0 +1,13 @@
+[[speakers]]
+slug = "jo-doe"
+first = "Jo"
+last = "Doe"
+bio = "Our title speaker!"
+sessions = ["greatness", "the-title"]
+
+[[speakers]]
+slug = "harpreet-singh"
+first = "Harpreet"
+last = "Singh"
+bio = "Harpreet is great!"
+sessions = ["greatness"]

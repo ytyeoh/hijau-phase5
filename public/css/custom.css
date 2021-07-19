@@ -1,0 +1,311 @@
+/* your styles go here */
+.vcenter {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+}
+.align-center{
+  text-align: center;
+}
+.pad2{
+  padding: 2rem 0;
+}
+.view-sm{
+  display: none;
+}
+.box-image-text .image {
+  min-height: 200px;
+  max-height: 200px;
+}
+
+.box-simple {
+  min-height: 230px;
+}
+
+.li-16{
+  width: 16.6667%;
+  text-align: center;
+  font-family: Montserrat;
+  font-weight: normal;
+}
+
+#nav-btm{
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+#navbar{
+  background-color: #3A3933;
+
+  >li{
+    color: white;
+  }
+  
+}
+
+/*section1*/
+.lll {
+  background: url('../img/ll.png')no-repeat center right; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 80% 80%;
+  background-position-x: 30rem;
+  padding-bottom: 5rem;
+}
+.ll2{
+  min-height: 850px;
+  color: #3A3933; 
+  padding-left: 8rem;
+}
+.ll2 h3{
+  font-size: 3.6rem;
+  font-weight: lighter;
+  color: #989689;
+}
+.aa{
+  font-size: 2rem;
+  font-weight: normal;
+  
+}
+.ab{
+  font-size: 10rem;
+  font-family: Trajan Pro;
+  color: #70A132;
+}
+.ac{
+  font-size: 2.4rem;
+  font-weight: normal;
+}
+.ad{
+  font-size: 3.6rem;
+}
+.col {
+    display: table-cell; /* Make elements inside the container behave like table cells */
+}
+.home-carousel .dark-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #EAEAEA;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+.back-i{
+  position: absolute;
+  left: 25rem;
+  top: 3rem;
+}
+.bg-light-grey{
+  background-color: #EAEAEA;
+
+  height: 100%;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    min-width: 100%;
+    height: auto;
+}
+#home-page .owl-controls{
+    margin-top: 0px; 
+    text-align: right;
+    top: -5rem;
+    padding-right: 7rem;
+    position: relative;
+}
+#home-page .owl-buttons{
+  padding-right: 80%;
+}
+/*description section*/
+.ll3{
+  padding: 0 3rem;
+  padding-bottom: 5rem;
+}
+.ll3 h3{
+  margin-top: 0;
+  font-family: Trajan Pro;
+  font-size: 3.5rem;
+  color: #3A3933;
+  font-weight: normal;
+
+}
+.ll3 p{
+  font-size: 2rem;
+}
+.white-top{
+  border-top: 5px solid white;
+  margin: 0 5rem;
+  margin-top: -3rem;
+  padding-top: 3rem;
+}
+.green{
+  border-top: 10px solid #71a132;
+  left: 15px;
+}
+.fa, .fas {
+  font-weight: 700;
+}
+.pad0{
+  padding: 0;
+}
+.padtop4{
+  padding-top: 4rem;
+}
+.mar0{
+  margin:0;
+}
+
+/*features*/
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);  
+  border-radius: 2rem;
+  background: white;
+  margin: 1rem;
+}
+.box-fea{
+  padding: 4rem 3rem;
+}
+.svg{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100px;
+    background-position: center;
+}
+.bar p{
+  padding: 1rem 0;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+/*floor plan*/
+#floor-plan{
+  background:  linear-gradient(to right, #EAEAEA 30%, #fff 0%);
+  height: 100%;
+  margin-bottom: 0;
+  padding-bottom: 5rem;
+}
+#floor-plan .card{
+  text-transform: capitalize;
+  padding: 2rem 3rem;
+}
+.digit{
+  font-size: 7rem;
+  padding-left: 2rem;
+  padding-right: 3rem;
+}
+.internal{
+  position: absolute;
+  top: 6.5rem;
+  font-size: 2rem;
+}
+/*site_plan*/
+#image-zoom{
+  width: 100%;
+  height: 650px;
+  overflow: auto;
+  cursor: grab;
+  cursor: -o-grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+#image-zoom img {
+  height: auto;
+  width: 100%;
+}
+.zoom-btn{
+  position: absolute;
+  bottom: 4rem;
+  left: 10rem;
+}
+.zoom-btn button{
+  background-color: #3A3933;
+  color: white;
+  border-radius: 20rem;
+  padding: 1rem;
+}
+#site-plan .box-fea {
+  padding: 6rem 3rem;
+}
+#site-plan .bg-light-grey{
+  height: 650px;
+}
+#site-plan h3{
+  padding: 5rem 0;
+}
+#site-plan h4{
+  margin: 3rem 0;
+  font-size: 8rem;
+}
+/*Footer*/
+#footer{
+  color:  #3A3933;
+  font-size: 14px;
+}
+#footer .lead{
+  font-size: 14px;
+}
+#footer .btn{
+  text-transform: capitalize;
+  width:100%;
+  border-radius: 1rem;
+  border-radius: 1.5rem;
+  padding: 1.5rem 1rem;
+  font-size: 13px;
+  background: #70A132;
+  color: white;
+
+}
+#footer input{
+  border-radius: 1.5rem;
+  padding: 2.5rem 1rem;
+}
+#footer ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #DDDBD4;
+  opacity: 1; /* Firefox */
+}
+.btf{
+  font-weight: bolder;
+  font-weight: 900;
+}
+#copyright a{
+  color: #3A3933;
+  text-transform: uppercase;
+}
+#copyright a:hover, a:focus{
+  text-decoration: none;
+}
+#copyright p{
+  font-size: 1rem;
+  left: 3rem;
+}
+#footbar{
+  position: fixed;
+  bottom: 11%;
+  right: 5%;
+}
+#footbar a{
+  border-radius: 2rem;
+  color: white;
+  text-transform: uppercase;
+}
+#footbar a, a:hover, a:focus{
+  color: white;
+  text-decoration: none;
+}
+.primary-back{
+  background-color: #3A3933;
+  padding: 1rem 3rem;
+}
+.primary-text{
+  color: #3A3933;
+}
+.secondary-text{
+  color: #70A132;
+}
+.secondary-back{
+  background-color: #70A132;
+  padding: 1rem 3rem;
+}
+

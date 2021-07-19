@@ -1,0 +1,24 @@
+<section id="specifications">
+    <div class="home-carousel container">
+             <div class=" row">
+                <div class="col  col-xs-12 ">
+                    <h3 class="secondary-text">SPECIFICATIONS</h3>
+                <div class="specifications owl-carouse bg-light-greyl" id="desciption-page" id="ggg">
+                    {{ range .Site.Params.specifications.img }}
+                    <div class="item boxsha">
+                        <div class="row">
+                            <div class="col-sm-12 ">
+                                <a href="{{ .img }}" data-lightbox="specifications">
+                                <img class="img-responsive" src="{{ .img }}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>  
+                </div>              
+            </div>
+            <!-- /.project owl-slider -->
+        </div>
+    </div>
+</section>
