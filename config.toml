@@ -228,54 +228,68 @@ paginate = 10
         [[params.access.main.sub]]
             name = "SMJK(C) Jit Sin 2"
             distance = "2km"
+            time = "2"
         [[params.access.main.sub]]
             name = "SMK Valdor"
             distance = "2km"
+            time = "2"
         [[params.access.main.sub]]
             name = "SJK(C) Kampung Valdorr"
             distance = "2km"
+            time = "2"
     [[params.access.main]]
         name = "Access to Penang Island"
         icon = "bridge"
         [[params.access.main.sub]]
             name = "2nd Penang Bridge"
             distance = "2km"
+            time = "2"
         [[params.access.main.sub]]
             name = "Penang Bridge"
             distance = "2km"
+            time = "2"
     [[params.access.main]]
         name = "Markets"
         icon = "market"
         [[params.access.main.sub]]
             name = "Valdor Market"
             distance = "2km"
+            time = "2"
         [[params.access.main.sub]]
             name = "TESCO"
             distance = "2km"
+            time = "2"
         [[params.access.main.sub]]
             name = "JUSCO"
             distance = "2km"
+            time = "2"
     [[params.access.main]]
         name = "Neighbouring Township"
         icon = "township"
         [[params.access.main.sub]]
             name = "Batu Kawan"
             distance = "2km"
+            time = "2"
         [[params.access.main.sub]]
             name = "Bukit Mertajam"
             distance = "2km"
+            time = "2"
         [[params.access.main.sub]]
             name = "Alma"
             distance = "2km"
+            time = "2"
         [[params.access.main.sub]]
             name = "Simpang Ampat"
             distance = "2km"
+            time = "2"
         [[params.access.main.sub]]
             name = "Sungai Bakap"
             distance = "2km"
+            time = "2"
         [[params.access.main.sub]]
             name = "Nibong Tebal"
             distance = "2km"
+            time = "2"
 [params.gallery]
     [[params.gallery.img]]
     img = "/img/gallery/IRIS-5.png"

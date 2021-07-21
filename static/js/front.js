@@ -136,6 +136,7 @@ function sliders () {
       navigationText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
       slideSpeed: 2000,
       paginationSpeed: 1000,
+      autoPlay: true,
       items:2,
       loop:true,
       center:false,

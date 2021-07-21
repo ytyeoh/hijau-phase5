@@ -313,6 +313,7 @@ ul.list-style-none {
   letter-spacing: 0.08em;
   border-top: solid 5px transparent;
   font-size: 20px;
+  color: #fff;
 }
 
 .navbar ul.nav > li.active > a,
@@ -335,15 +336,15 @@ ul.list-style-none {
   color: #555555 !important;
 }
 .navbar.navbar-light ul.nav > li.active > a:hover {
-  border-top: solid 5px #20616d;
+  border-top: solid 5px #3A3933;
 }
 .navbar.navbar-light ul.nav > li > a:hover,
 .navbar.navbar-light ul.nav > li.open > a:hover,
 .navbar.navbar-light ul.nav > li > a:focus,
 .navbar.navbar-light ul.nav > li.open > a:focus {
-  border-top: solid 5px #38a7bb;
-  background: #fff !important;
-  color: #555555 !important;
+  border-top: solid 5px #70A132;
+  background: #70A132 !important;
+  color: #fff !important;
 }
 .navbar ul.dropdown-menu {
   margin: 0;

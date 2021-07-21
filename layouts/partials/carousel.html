@@ -3,28 +3,28 @@
 {{ if gt (len .Site.Data.carousel) 0 }}
 <section class="mar0 home bg-light-grey">
     <div class="home-carousel">
-             <div class=" row">
+            <div class=" row">
                 <div class="col col-sm-6 col-xs-12 col-sm-push-6 bg-light-grey mpad0">
                     <div class="lll">
-                    <div class=" ll2">
-                        <div class="row">
-                            <div class="col-md-12 col-xs-6">
-                                <h3 class="text-uppercase">{{ .Site.Params.home.title |  safeHTML }}</h3>
-                            </div>
-                            <div class="col-md-12 col-xs-6">
-                                <p class="lead aa">{{ .Site.Params.home.subtitle |  safeHTML }}</p>
-                            </div>
-                            <div class="col-md-12 col-xs-6 ">
-                                <p class="lead ab">{{ .Site.Params.home.name |  safeHTML }}</p>
-                            </div>
-                            <div class="col-md-12 col-xs-6">
-                                <p class="lead ac">{{ .Site.Params.home.size |  safeHTML }}</p>
-                            </div>
-                            <div class="col-md-12 col-xs-6  ">
-                                <p class="lead ad">{{ .Site.Params.home.type |  safeHTML }}</p>
+                        <div class=" ll2">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-6">
+                                    <h3 class="text-uppercase">{{ .Site.Params.home.title |  safeHTML }}</h3>
+                                </div>
+                                <div class="col-md-12 col-xs-6">
+                                    <p class="lead aa">{{ .Site.Params.home.subtitle |  safeHTML }}</p>
+                                </div>
+                                <div class="col-md-12 col-xs-6 ">
+                                    <p class="lead ab">{{ .Site.Params.home.name |  safeHTML }}</p>
+                                </div>
+                                <div class="col-md-12 col-xs-6">
+                                    <p class="lead ac">{{ .Site.Params.home.size |  safeHTML }}</p>
+                                </div>
+                                <div class="col-md-12 col-xs-6  ">
+                                    <p class="lead ad">{{ .Site.Params.home.type |  safeHTML }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
                 <div class="col col-sm-6 col-xs-12 col-sm-pull-6 mpad0">
@@ -43,7 +43,6 @@
                 
             </div>
             <!-- /.project owl-slider -->
-        </div>
     </div>
 </section>
 {{ end }}
