@@ -28,35 +28,35 @@ paginate = 10
 [[menu.main]]
     identifier="about"
     name = "about"
-    url  = "/"
+    url  = "#about"
     weight = 1
 
 [[menu.main]]
     identifier="floor plan"
     name = "floor plan"
-    url  = "/blog/"
+    url  = "#floor-plan"
     weight = 2
 
 [[menu.main]]
     identifier = "location"
     name = "location"
-    url  = "/faq/"
+    url  = "#site-plan"
     weight = 3
 
 [[menu.main]]
     identifier = "contact"
     name = "Contact"
-    url  = "/contact/"
+    url  = "#footer"
     weight = 4
 [[menu.main]]
     identifier = "gallery"
     name = "gallery"
-    url  = "/gallery/"
+    url  = "#gallery"
     weight = 5
 [[menu.main]]
     identifier = "specifications"
     name = "specifications"
-    url  = "/#specifications"
+    url  = "#specifications"
     weight = 6
 
 
