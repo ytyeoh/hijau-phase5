@@ -30,7 +30,20 @@
           {{ end }}
       </div>
       <div class="col-md-6 white-bb">
-        <img src="{{ .Site.Params.floor_plan.floor_plan }}" alt="" class="img-responsive">
+        {{ $imagePath := printf "/img/%s" .Site.Params.floor_plan.floor_plan }}
+        {{- $asset := resources.Get $imagePath -}}
+        {{ $tiny := ($asset.Fill "480x656 q90") }}
+        {{ $small := ($asset.Fill "768x1050 q90") }}
+        {{ $medium := ($asset.Fill "1000x1367 q90") }}
+        {{ $large := ($asset.Fill "1316x1800 q90") }}
+
+        <img 
+        srcset="
+        {{- with $tiny.RelPermalink -}}{{.}} 480w{{- end -}}
+        {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
+        {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
+        {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}"
+    src="{{ .Site.Params.floor_plan.floor_plan }}" alt="" class="img-responsive">
       </div>
     </div>
   </div>
