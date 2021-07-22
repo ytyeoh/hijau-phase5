@@ -143,7 +143,7 @@ paginate = 10
     built_up = "19’x 43.8’" 
     floor_plan = "Floor_plan.png"
 [params.site_plan]
-    img = "img/Site_plan.png"
+    img = "Site_plan.png"
     icon = "low-den"
     digit = "50"
     quantity = "Units"

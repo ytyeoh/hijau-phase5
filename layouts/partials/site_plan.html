@@ -22,7 +22,19 @@
     </div>
     <div class="col-md-9 pad0 col-md-pull-3">
       <div id="image-zoom">
-        <img id="map" src="{{ .Site.Params.site_plan.img }}">
+      {{ $imagePath := printf "/img/%s" .Site.Params.site_plan.img }}
+        {{- $asset := resources.Get $imagePath -}}
+        {{ $tiny := ($asset.Resize "480x q90") }}
+        {{ $small := ($asset.Resize "768x q90") }}
+        {{ $medium := ($asset.Resize "1000x q90") }}
+        {{ $large := ($asset.Resize "1300x q90") }}
+
+        <img 
+        srcset="
+        {{- with $tiny.RelPermalink -}}{{.}} 480w{{- end -}}
+        {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
+        {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
+        {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}" id="map" src="{{ .Site.Params.site_plan.img }}">
       </div>
       <div class="zoom-btn view-md">
         <button type="button" onclick="zoomin()"><i class="fas fa-plus"></i></button>
