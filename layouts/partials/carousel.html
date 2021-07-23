@@ -33,7 +33,20 @@
                         <div class="item">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <img class="img-responsive" src="{{ .image }}" alt="">
+                                    {{ $imagePath := printf "/images/%s" .image }}
+        {{- $asset := resources.Get $imagePath -}}
+        {{ $tiny := ($asset.Resize "400x q90") }}
+        {{ $small := ($asset.Resize "600x q90") }}
+        {{ $medium := ($asset.Resize "700x q90") }}
+        {{ $large := ($asset.Resize "900x q90") }}
+
+        <img 
+        srcset="
+        {{- with $tiny.RelPermalink -}}{{.}} 480w{{- end -}}
+        {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
+        {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
+        {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}"
+                                    img class="img-responsive" src="{{ .image }}" alt="">
                                 </div>
                             </div>
                         </div>
