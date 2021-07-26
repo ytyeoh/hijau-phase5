@@ -1,4 +1,36 @@
+@media only screen and (min-width: 982px) {
+  #about{
+    background: linear-gradient(270deg, #EAEAEA 50%, #fff 50%);
+  }
+  .navbar{
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+  }
+
+  .navbar{
+    background-color: #3A3933;
+      z-index: 1;
+      position: fixed;
+      bottom: 0;
+
+    >li{
+      color: white;
+    }
+    
+  }
+}
 /* your styles go here */
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
 .vcenter {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -7,11 +39,14 @@
 .align-center{
   text-align: center;
 }
+.align-right{
+  text-align: right;
+}
 .pad2{
   padding: 2rem 0;
 }
 .view-sm{
-  display: none;
+  display: none!important;
 }
 .box-image-text .image {
   min-height: 200px;
@@ -28,22 +63,14 @@
   font-family: Montserrat;
   font-weight: normal;
 }
-
-#nav-btm{
-  position: fixed;
-  bottom: 0;
-  z-index: 1;
-  width: 100%;
+nav{
+  background: #3A3933;
 }
 
-#navbar{
-  background-color: #3A3933;
-
-  >li{
-    color: white;
-  }
-  
+.btn-template-main{
+  color: white;
 }
+
 
 /*section1*/
 .lll {
@@ -56,7 +83,7 @@
   padding-bottom: 5rem;
 }
 .ll2{
-  min-height: 850px;
+  min-height: 650px;
   color: #3A3933; 
   padding-left: 8rem;
 }
@@ -100,7 +127,7 @@
   top: 3rem;
 }
 .bg-light-grey{
-  background-color: #EAEAEA;
+  background: #EAEAEA;
 
   height: 100%;
 }
@@ -120,6 +147,7 @@
   padding-right: 80%;
 }
 /*description section*/
+
 .ll3{
   padding: 0 3rem;
   padding-bottom: 5rem;
@@ -133,7 +161,11 @@
 
 }
 .ll3 p{
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.ll3 lead{
+  margin-bottom: 5rem;
 }
 .white-top{
   border-top: 5px solid white;
@@ -166,7 +198,7 @@
   margin: 1rem;
 }
 .box-fea{
-  padding: 4rem 3rem;
+  padding: 2rem 3rem;
 }
 .svg{
     background-repeat: no-repeat;
@@ -238,6 +270,28 @@
   margin: 3rem 0;
   font-size: 8rem;
 }
+/*accessibility*/
+#accessibility{
+  font-size: 2rem;
+  font-weight: normal;
+  padding-bottom: 5rem;
+}
+#accessibility .top-border{
+  border-top: 5px solid white;
+  padding-top: 15px;
+}
+#accessibility h4{
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: normal;
+}
+/*specifications*/
+#specifications .boxsha{
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  padding: 3rem;
+  margin: 3rem;
+  border-radius: 2rem;
+}
 /*Footer*/
 #footer{
   color:  #3A3933;
@@ -298,11 +352,18 @@
   background-color: #3A3933;
   padding: 1rem 3rem;
 }
+.white-back{
+  background-color: #fff;
+
+}
 .primary-text{
   color: #3A3933;
 }
 .secondary-text{
   color: #70A132;
+}
+.light-grey-text{
+  color: #989689;
 }
 .secondary-back{
   background-color: #70A132;

@@ -22,27 +22,67 @@
     </div>
     <div class="col-md-9 pad0 col-md-pull-3">
       <div id="image-zoom">
-      {{ $imagePath := printf "/img/%s" .Site.Params.site_plan.img }}
+        {{ $webp := printf "./img/%s.webp" .Site.Params.site_plan.img }}
+        {{ $imagePath := printf "/img/%s.png" .Site.Params.site_plan.img }}
         {{- $asset := resources.Get $imagePath -}}
-        {{ $tiny := ($asset.Resize "480x q90") }}
-        {{ $small := ($asset.Resize "768x q90") }}
-        {{ $medium := ($asset.Resize "1000x q90") }}
-        {{ $large := ($asset.Resize "1300x q90") }}
-
-        <img 
-        srcset="
-        {{- with $tiny.RelPermalink -}}{{.}} 480w{{- end -}}
-        {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
-        {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
-        {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}" id="map" src="{{ .Site.Params.site_plan.img }}">
+        {{ $tiny := ($asset.Resize "400x q90") }}
+        {{ $small := ($asset.Resize "600x q90") }}
+        {{ $medium := ($asset.Resize "700x q90") }}
+        {{ $large := ($asset.Resize "900x q90") }}
+        <picture>
+          <source srcset="{{ $webp }}" type="image/webp">
+          <img 
+          srcset="
+          {{- with $tiny.RelPermalink -}}{{.}} 200w{{- end -}}
+          {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
+          {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
+          {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}"
+          img src="{{ $small.RelPermalink }}" alt="" class="img-responsive">
+        <picture>
       </div>
       <div class="zoom-btn view-md">
         <button type="button" onclick="zoomin()"><i class="fas fa-plus"></i></button>
         <button type="button" onclick="zoomout()"><i class="fas fa-minus"></i></button>
       </div>
     </div>
-    <div class="col-md-6"><img src="{{ .Site.Params.site_plan.map1 }}" alt="" class="img-responsive"></div>
-    <div class="col-md-6"><img src="{{ .Site.Params.site_plan.map2 }}" alt="" class="img-responsive"></div>
+    <div class="col-md-6"> 
+      {{ $webp := printf "./img/%s.webp" .Site.Params.site_plan.map1 }}
+      {{ $imagePath := printf "/img/%s.png" .Site.Params.site_plan.map1 }}
+      {{- $asset := resources.Get $imagePath -}}
+      {{ $tiny := ($asset.Resize "400x q90") }}
+      {{ $small := ($asset.Resize "600x q90") }}
+      {{ $medium := ($asset.Resize "700x q90") }}
+      {{ $large := ($asset.Resize "900x q90") }}
+      <picture>
+        <source srcset="{{ $webp }}" type="image/webp">
+        <img 
+        srcset="
+        {{- with $tiny.RelPermalink -}}{{.}} 200w{{- end -}}
+        {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
+        {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
+        {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}"
+        img src="{{ $small.RelPermalink }}" alt="" class="img-responsive">
+      <picture>
+    </div>
+    <div class="col-md-6">
+      {{ $webp := printf "/hvp6/img/%s.webp" .Site.Params.site_plan.map2 }}
+      {{ $imagePath := printf "/img/%s.png" .Site.Params.site_plan.map2 }}
+      {{- $asset := resources.Get $imagePath -}}
+      {{ $tiny := ($asset.Resize "400x q90") }}
+      {{ $small := ($asset.Resize "600x q90") }}
+      {{ $medium := ($asset.Resize "700x q90") }}
+      {{ $large := ($asset.Resize "900x q90") }}
+      <picture>
+        <source srcset="{{ $webp }}" type="image/webp">
+        <img 
+        srcset="
+        {{- with $tiny.RelPermalink -}}{{.}} 200w{{- end -}}
+        {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
+        {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
+        {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}"
+        img src="{{ $small.RelPermalink }}" alt="" class="img-responsive">
+      <picture>
+     </div>
   </div>
 </section>
 <script>

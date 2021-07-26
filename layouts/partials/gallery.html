@@ -9,9 +9,20 @@
                     <div class="item">
                         <div class="row">
                             <div class="col-sm-12">
-                                <a href="{{ .img }}" data-lightbox="gallery">
-                                <img class="img-responsive" src="{{ .img }}" alt="">
-                                </a>
+                                    {{ $webp := printf "./img/gallery/%s.webp" .img }}
+                                    {{ $imagePath := printf "/img/gallery/%s.png" .img }}
+                                    {{- $asset := resources.Get $imagePath -}}
+                                    {{ $tiny := ($asset.Resize "400x q90") }}
+                                    {{ $small := ($asset.Resize "600x q90") }}
+                                    {{ $medium := ($asset.Resize "700x q90") }}
+                                    {{ $large := ($asset.Resize "900x q90") }}
+                                    <picture>
+                                     
+                                      <a href="{{ $webp }}" data-lightbox="gallery">
+                                         <source srcset="{{ $webp }}" type="image/webp">
+                                          <img src="{{ $webp }}" alt="" class="img-responsive">
+                                      </a>
+                                    <picture>
                             </div>
                         </div>
                     </div>

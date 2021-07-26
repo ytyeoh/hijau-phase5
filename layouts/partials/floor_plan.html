@@ -30,20 +30,23 @@
           {{ end }}
       </div>
       <div class="col-md-6 white-bb">
-        {{ $imagePath := printf "/img/%s" .Site.Params.floor_plan.floor_plan }}
+        {{ $webp := printf "./img/%s.webp" .Site.Params.floor_plan.floor_plan }}
+        {{ $imagePath := printf "/img/%s.png" .Site.Params.floor_plan.floor_plan }}
         {{- $asset := resources.Get $imagePath -}}
-        {{ $tiny := ($asset.Resize "480x q90") }}
-        {{ $small := ($asset.Resize "768x q90") }}
-        {{ $medium := ($asset.Resize "1000x q90") }}
-        {{ $large := ($asset.Resize "1300x q90") }}
-
-        <img 
-        srcset="
-        {{- with $tiny.RelPermalink -}}{{.}} 480w{{- end -}}
-        {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
-        {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
-        {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}"
-    src="{{ .Site.Params.floor_plan.floor_plan }}" alt="" class="img-responsive">
+        {{ $tiny := ($asset.Resize "400x q90") }}
+        {{ $small := ($asset.Resize "600x q90") }}
+        {{ $medium := ($asset.Resize "700x q90") }}
+        {{ $large := ($asset.Resize "900x q90") }}
+        <picture>
+          <source srcset="{{ $webp }}" type="image/webp">
+          <img 
+          srcset="
+          {{- with $tiny.RelPermalink -}}{{.}} 200w{{- end -}}
+          {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
+          {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
+          {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}"
+          img src="{{ $small.RelPermalink }}" alt="" class="img-responsive">
+        <picture>
       </div>
     </div>
   </div>

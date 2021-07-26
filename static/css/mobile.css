@@ -275,6 +275,9 @@
   #copyright .col-xs-2{
     width: 20%;
   }
+  #copyright p{
+    line-height: 1.1rem;
+  }
   #footbar{
     width:100%;
     right: 0;
@@ -285,5 +288,8 @@
     width:90%;
     margin: 0 5%;
     font-size: 1.5rem;
+  }
+  .pad22{
+    padding: 2rem;
   }
 }
