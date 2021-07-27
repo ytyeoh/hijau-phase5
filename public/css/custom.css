@@ -21,6 +21,9 @@
     
   }
 }
+.loce{
+  display: none;
+}
 /* your styles go here */
 .row.display-flex {
   display: flex;

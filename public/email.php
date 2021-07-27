@@ -1,53 +1,21 @@
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-$errors = [];
-$errorMessage = '';
+<?PHP
+$top = "<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd"><html>";
+$bottom = "<body></body></html>";
+$blank = ' ';
+$sep = "\r\n";
+$subject = $_POST['d'];
+$name = $_POST['a'];
+$email = $_POST['b'];
+$phone = $_POST['c'];
 
-if (!empty($_POST)) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-    if (empty($name)) {
-        $errors[] = 'Name is empty';
-    }
-
-    if (empty($email)) {
-        $errors[] = 'Email is empty';
-    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = 'Email is invalid';
-    }
-
-    if (empty($message)) {
-        $errors[] = 'Message is empty';
-    }
-
-
-    if (empty($errors)) {
-        $to = "ytyeoh@me.com";
-		$subject = "My subject";
-		$txt = "Hello world!";
-		$headers = "From: webmaster@example.com";
-
-        $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
-        $body = join(PHP_EOL, $bodyParagraphs);
-
-        if (mail($to,$subject,$txt,$headers);) {
-            header('Location: thank-you.html');
-        } else {
-            $errorMessage = 'Oops, something went wrong. Please try again later';
-        }
-        echo 'mail send';
-    } else {
-        $allErrors = join('<br/>', $errors);
-        $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
-    }
+$contact = $_POST['email'] .$blank .$_POST['phone'];
+$body = $name .$sep .$email .$sep .$phone .$sep .$subject .$sep;
+if(!$_POST['a1'] && !$_POST['a2']){
+    mail('ytyeoh@kikia.co',$subject, $body);
+    echo ("Thank you for contacting us, " .$name."<br> Your message: <b>");
+    echo $subject;
+    echo "</b>, has been recieved</br> A response will be sent to you in a timely fashion. <br><br> Have a wonderful day!";
+ 
 }
-echo 'test';
-echo '<pre>';
-print_r($_POST);
 
 ?>
-
