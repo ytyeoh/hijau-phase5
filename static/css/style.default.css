@@ -2932,8 +2932,8 @@ fieldset[disabled] .btn-template-primary.active {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -3180,7 +3180,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 3px solid #D7DECD;
+  border-top: 3px solid #71a132;
 }
 /* breadcrumbs */
 .breadcrumb {
