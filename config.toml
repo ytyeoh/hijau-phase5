@@ -39,13 +39,13 @@ paginate = 10
 
 [[menu.main]]
     identifier = "location"
-    name = "location"
+    name = "site plan"
     url  = "#site-plan"
     weight = 3
 
 [[menu.main]]
     identifier = "contact"
-    name = "Contact"
+    name = "Location"
     url  = "#footer"
     weight = 4
 [[menu.main]]

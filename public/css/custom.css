@@ -1,6 +1,6 @@
 @media only screen and (min-width: 982px) {
   #about{
-    background: linear-gradient(270deg, #EAEAEA 50%, #fff 50%);
+    background: linear-gradient(270deg, #EAEAEA 42%, #fff 4%);
   }
   .navbar{
     position: fixed;
@@ -91,22 +91,22 @@ nav{
   padding-left: 8rem;
 }
 .ll2 h3{
-  font-size: 3.6rem;
+  font-size: 3rem;
   font-weight: lighter;
   color: #989689;
 }
 .aa{
-  font-size: 2rem;
+  font-size: 1.85rem;
   font-weight: normal;
   
 }
 .ab{
-  font-size: 10rem;
+  font-size: 9rem;
   font-family: Trajan Pro;
   color: #70A132;
 }
 .ac{
-  font-size: 2.4rem;
+  font-size: 2.0rem;
   font-weight: normal;
 }
 .ad{
@@ -157,7 +157,6 @@ nav{
 }
 .ll3 h3{
   margin-top: 0;
-  font-family: Trajan Pro;
   font-size: 3.5rem;
   color: #3A3933;
   font-weight: normal;
@@ -192,7 +191,9 @@ nav{
 .mar0{
   margin:0;
 }
-
+#about .owl-controls{
+  padding-top: 1em;
+}
 /*features*/
 .card{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);  
@@ -205,7 +206,7 @@ nav{
 }
 .svg{
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 80% 80%;
     min-height: 100px;
     background-position: center;
 }
@@ -238,7 +239,7 @@ nav{
 /*site_plan*/
 #image-zoom{
   width: 100%;
-  height: 650px;
+  /*height: 650px;*/
   overflow: auto;
   cursor: grab;
   cursor: -o-grab;
@@ -264,7 +265,7 @@ nav{
   padding: 6rem 3rem;
 }
 #site-plan .bg-light-grey{
-  height: 650px;
+  height: 100%;
 }
 #site-plan h3{
   padding: 5rem 0;
@@ -283,22 +284,39 @@ nav{
   border-top: 5px solid white;
   padding-top: 15px;
 }
+#accessibility h3{
+  margin-bottom: 10px;
+}
 #accessibility h4{
   text-transform: capitalize;
   font-size: 2rem;
   font-weight: normal;
+  margin-bottom: 0;
+}
+/*gallery*/
+#gallery .boxsha{
+  margin: 1em;
+  border-radius: 2rem;
 }
 /*specifications*/
 #specifications .boxsha{
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
   padding: 3rem;
-  margin: 3rem;
+  margin: 1em;
   border-radius: 2rem;
 }
 /*Footer*/
 #footer{
   color:  #3A3933;
   font-size: 14px;
+}
+#footer h4{
+  font-size: 2rem;
+}
+#footer h6{
+  font-size: 1.8rem;
+  text-transform: lowercase;
+  font-weight: normal;
 }
 #footer .lead{
   font-size: 14px;

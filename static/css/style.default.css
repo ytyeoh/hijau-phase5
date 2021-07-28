@@ -1132,10 +1132,10 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .owl-carousel .owl-controls .owl-buttons div,
 .owl-theme .owl-controls .owl-buttons div {
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   margin: 0 5px 0 0;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #fff;
   font-weight: 100;
   padding: 0;
@@ -1211,8 +1211,6 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .home-carousel ul,
 .home-carousel p {
- 
-  text-transform: uppercase;
   letter-spacing: 0.10em;
 }
 @media (max-width: 991px) {
@@ -3154,7 +3152,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 /* scaffolding */
 body {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   line-height: 1.42857143;
   color: #3A3933; 
@@ -3367,7 +3365,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   line-height: 1.1;
   color: #333333;
