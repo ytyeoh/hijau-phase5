@@ -1,4 +1,10 @@
 @media only screen and (max-width: 981px) {
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-toggle {
+    display: block;
+}
   .bd-example .fixed-top, .bd-example .sticky-top {
       position: static;
       margin: -1rem -1rem 1rem;

@@ -1,4 +1,10 @@
 @media only screen and (max-width: 981px) {
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-toggle {
+    display: block;
+}
   .bd-example .fixed-top, .bd-example .sticky-top {
       position: static;
       margin: -1rem -1rem 1rem;
@@ -65,14 +71,13 @@
   }
   .navbar-brand {
     float: left;
-    padding: 0;
-    padding-top: 1rem;
+    padding:  3px;
     font-size: 0;
     line-height: 0px; 
     height: 0px; 
-    margin-top: 11px;
-    margin-bottom: 11px;
-    margin-left: 11px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
     margin-right: 5px;
     display: block;
   }
@@ -157,11 +162,11 @@
     padding-bottom: 5rem;
   }
   .ac{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: normal;
   }
   .ad{
-    font-size:1.5rem;
+    font-size:1.3rem;
   }
   .col-xs-6{
     padding: 0;
@@ -186,6 +191,9 @@
   .ll3 p{
     font-size: 1rem;
   }
+  .bar p{
+    font-size: 1.8rem;
+  }
   .green{
     border-width: 1px;
     margin-right: 80%;
@@ -199,6 +207,7 @@
   /*floor plan*/
   #floor-plan{
     background: #EAEAEA;
+    font-size: 2rem;
   }
   .digit{
     font-size:45px;
@@ -212,7 +221,7 @@
     font-size: 1.5rem;
   }
   .svg{
-    min-height: 50px;
+    min-height: 8rem;
   }
   .white-bb {
     background: white;
@@ -267,6 +276,9 @@
   }
   #accessibility{
     font-size: 1rem;
+  }
+  #accessibility p{
+    padding-left: 1rem;
   }
   #accessibility .same-height{
     padding-top: 1rem;
