@@ -1,6 +1,6 @@
 @media only screen and (min-width: 982px) {
   #about{
-    background: linear-gradient(270deg, #EAEAEA 42%, #fff 4%);
+    background: linear-gradient(270deg, #EAEAEA 42.6%, #fff 4%);
   }
   .navbar{
     position: fixed;
@@ -170,8 +170,9 @@ nav{
 .ll3 lead{
   margin-bottom: 5rem;
 }
+
 .white-top{
-  border-top: 5px solid white;
+  border-top: 3px solid white;
   margin: 0 5rem;
   margin-top: -3rem;
   padding-top: 3rem;
@@ -193,7 +194,13 @@ nav{
   margin:0;
 }
 #about .owl-controls{
-  padding-top: 1em;
+  padding-top: 2.5em;
+}
+#about .owl-pagination{
+  padding-right: 1em;
+  right: 0;
+  bottom: 5px;
+  position: absolute;
 }
 /*features*/
 .card{
@@ -270,6 +277,7 @@ nav{
 }
 #site-plan h3{
   padding: 5rem 0;
+  font-weight: 900;
 }
 #site-plan h4{
   margin: 3rem 0;
@@ -282,17 +290,21 @@ nav{
   padding-bottom: 5rem;
 }
 #accessibility .top-border{
-  border-top: 5px solid white;
+  border-top: 3px solid white;
   padding-top: 15px;
 }
 #accessibility h3{
   margin-bottom: 10px;
+  padding-top: 1em;
 }
 #accessibility h4{
   text-transform: capitalize;
   font-size: 2rem;
   font-weight: normal;
   margin-bottom: 0;
+}
+#accessibility p{
+  font-weight: 800;
 }
 /*gallery*/
 #gallery .boxsha{
@@ -309,9 +321,9 @@ nav{
 /*Footer*/
 #footer{
   color:  #3A3933;
-  font-size: 14px;
+  font-size: 1.8rem;
 }
-#footer h4{
+#footer h4,h5{
   font-size: 2rem;
 }
 #footer h6{
@@ -320,7 +332,7 @@ nav{
   font-weight: normal;
 }
 #footer .lead{
-  font-size: 14px;
+  font-size: 1.8rem;
 }
 #footer .btn{
   text-transform: capitalize;
@@ -358,7 +370,7 @@ nav{
 }
 #footbar{
   position: fixed;
-  bottom: 11%;
+  bottom: 3em;
   right: 5%;
 }
 #footbar a{

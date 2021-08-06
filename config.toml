@@ -103,7 +103,7 @@ paginate = 10
     digit = "50"
     quantity = "Units"
     map1 = "map1"
-    map2 = "map2"
+    map2 = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7946.255295997723!2d100.48926053094233!3d5.242633538182633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ab6e7868bb505%3A0x1b7aa7ac42067bf9!2s942-931%2C%20Jalan%2010%2C%20Perkampungan%20Valdor%2C%2014200%20Sungai%20Jawi%2C%20Pulau%20Pinang!5e0!3m2!1sen!2smy!4v1628072627763!5m2!1sen!2smy" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'
 
 # Enable or disable top bar with social icons
 
@@ -123,7 +123,7 @@ paginate = 10
 [params.home]
     enable = true
     title = "phase 6"
-    subtitle = "FREEHOLD & GUARDED <br>Sungai Bakap"
+    subtitle = "Freehold & Guarded <br>Sungai Bakap"
     name = "iris"
     size = "1,365 sqft"
     type= "SINGLE STOREY <br> TERRACE HOUSE"
