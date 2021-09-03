@@ -10,7 +10,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                     {{ $webp := printf "./img/gallery/%s.webp" .img }}
-                                    {{ $imagePath := printf "/img/gallery/%s.png" .img }}
+                                    {{ $imagePath := printf "/img/gallery/%s.jpg" .img }}
                                     {{- $asset := resources.Get $imagePath -}}
                                     {{ $tiny := ($asset.Resize "400x q90") }}
                                     {{ $small := ($asset.Resize "600x q90") }}

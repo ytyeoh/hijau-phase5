@@ -404,3 +404,10 @@ nav{
   padding: 1rem 3rem;
 }
 
+.flex-inline{
+  flex-direction: initial !important;
+}
+.distance{
+  /*display:  contents;*/
+  width: 2em;
+}
