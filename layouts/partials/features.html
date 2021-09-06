@@ -12,7 +12,7 @@
                             
                         </div>
                     </div>
-                    <p>{{ $element.name | markdownify }}</p>
+                    <p>{{ $element.name | safeHTML }}</p>
                 </div>
                 {{ end }}
             </div>

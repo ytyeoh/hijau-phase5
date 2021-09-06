@@ -1185,6 +1185,12 @@ fieldset[disabled] .btn-template-primary.active {
 .home-carousel .owl-theme .owl-controls .owl-page.active span {
   background: #fff;
 }
+#about .home-carousel .owl-theme .owl-controls .owl-page.active span {
+  background: #000;
+}
+#about .home-carousel .owl-theme .owl-controls .owl-page:hover span {
+  background: #000;
+}
 .home-carousel .owl-theme .owl-controls .owl-page:hover span {
   background: #fff;
 }
@@ -2610,9 +2616,12 @@ fieldset[disabled] .btn-template-primary.active {
 #footer .social a:hover {
   color: #38a7bb;
 }
+#footer #contact h4{
+  font-size: 1.8rem;
+}
 #copyright {
   background: #EAEAEA;
-  color: #989689;
+  color: #000;
   padding-bottom: 10rem;
   font-size: 1.4rem;
   line-height: 28px;
@@ -2815,7 +2824,8 @@ fieldset[disabled] .btn-template-primary.active {
 /* navbar */
 .navbar {
   position: relative;
-  min-height: 62px;
+  min-height: 52px;
+  max-height: 58px;
   margin-bottom: 0;
   border-bottom: 1px solid transparent;
 }
@@ -2984,8 +2994,8 @@ fieldset[disabled] .btn-template-primary.active {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding-top: 11px;
+    padding-bottom: 11px;
   }
   .navbar-nav.navbar-right:last-child {
     margin-right: -15px;

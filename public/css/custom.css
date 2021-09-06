@@ -83,7 +83,7 @@ nav{
   -o-background-size: cover;
   background-size: 80% 80%;
   background-position-x: 30rem;
-  padding-bottom: 5rem;
+  /*padding-bottom: 5rem;*/
 }
 .ll2{
   min-height: 650px;
@@ -149,6 +149,9 @@ nav{
 }
 #home-page .owl-buttons{
   padding-right: 80%;
+}
+.owl-buttons{
+   margin-left: 1em;
 }
 /*description section*/
 
@@ -410,4 +413,8 @@ nav{
 .distance{
   /*display:  contents;*/
   width: 2em;
+}
+
+.rmb10{
+  margin-bottom: -1em;
 }

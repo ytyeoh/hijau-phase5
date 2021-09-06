@@ -46,7 +46,7 @@
         </div>
  
         <div class="col-md-4 col-sm-6" id="contact">
-
+            <h4>{{ .Site.Params.contact_title  }}</h4>
             <form {{ with .Site.Params.contact_form_ajax }}class="contact-form-ajax"{{ else }}{{ end }} method="post" action="{{ .Site.Params.formspree_action }}">
                     <div class="row">
                         <div class="col-sm-12">
