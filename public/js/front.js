@@ -20,6 +20,7 @@ $(function () {
   counters()
   demo()
   contactFormAjax()
+  menuClose()
 })
 
 // Ajax contact
@@ -84,6 +85,7 @@ function sliderHomepage () {
     $('#slider').owlCarousel({
       autoPlay: 3000,
       items: 4,
+      loop:true,
       itemsDesktopSmall: [450, 3],
       itemsTablet: [600, 3],
       itemsMobile: [500, 2]
@@ -119,12 +121,41 @@ function sliders () {
       afterInit: '',
       lazyLoad: true
     })
+    $('.specifications').owlCarousel({
+      dotsContainer: '#carousel-custom-dots',
+      navigation: true, // Show next and prev buttons
+      navigationText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+      paginationSpeed: 1000,
+      items:2,
+      loop:true,
+      center:false,
+      margin:10
+    })
+    $('.gallery').owlCarousel({
+      dotsContainer: '#carousel-custom-dots',
+      navigation: true, // Show next and prev buttons
+      navigationText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+      paginationSpeed: 1000,
+      autoPlay: true,
+      items:2,
+      loop:true,
+      center:false,
+      margin:10,
+      URLhashListener:true,
+      autoplayHoverPause:false,
+      startPosition: 'URLHash',
+      afterInit: function () {
+        // animationsSlider()
+      },
+      afterMove: function () {
+        // animationsSlider()
+      }
+    })
 
     $('.desciption-page').owlCarousel({
       dotsContainer: '#carousel-custom-dots',
       navigation: true, // Show next and prev buttons
       navigationText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
-      slideSpeed: 2000,
       paginationSpeed: 1000,
       autoPlay: true,
       stopOnHover: true,
@@ -140,15 +171,16 @@ function sliders () {
     })
     $('.homepage').owlCarousel({
       dotsContainer: '#carousel-custom-dots',
+      loop:true,
       navigation: true, // Show next and prev buttons
       navigationText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
-      slideSpeed: 2000,
-      paginationSpeed: 1000,
       autoPlay: true,
       stopOnHover: true,
       singleItem: true,
       lazyLoad: false,
       addClassActive: true,
+       animateOut: 'slideOutUp',
+           animateIn: 'slideInUp',
       afterInit: function () {
         // animationsSlider()
       },
@@ -343,10 +375,19 @@ function productDetailGallery (confDetailSwitch) {
     $('#mainImage img').attr('src', bigUrl)
   }
 }
+// close menu after pree
+function menuClose () {
+  var navMain = $("#navigation");
+    $('.li-16 a').click(function (e) {
+       navMain.collapse('hide');
+       $('#navbar-close').addClass('hidden');
+       $('#navbar-hamburger').removeClass('hidden');
+   });
+}
 
 /* product detail sizes */
 function productDetailSizes () {
-  $('.sizes a').click(function (e) {
+  $('.close').click(function (e) {
     e.preventDefault()
     $('.sizes a').removeClass('active')
     $('.size-input').prop('checked', false)
@@ -409,3 +450,13 @@ $(function() {
     $('#navbar-close').toggleClass('hidden');  
   });
 });
+
+
+    lightbox.option({
+    resizeDuration: 200,
+    wrapAround: true,
+    fadeDuration: 1000,
+    fitImagesInViewport: true,
+    wrapAround: true,
+    });
+

@@ -2,18 +2,18 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h3 class="secondary-text">Floor plant</h3>
+        <h3 class="secondary-text">Floor plan</h3>
         <div class="row">
           <div class="col-md-7 col-xs-6">land area</div>
-          <div class="col-md-3 col-xs-6">{{ .Site.Params.floor_plan.land_area }}</div>
+          <div class="col-md-5 col-xs-6">{{ .Site.Params.floor_plan.land_area }}</div>
           <div class="col-md-7 col-xs-6">build-up area</div>
-          <div class="col-md-3 col-xs-6">{{ .Site.Params.floor_plan.built_up }}</div>
+          <div class="col-md-5 col-xs-6">{{ .Site.Params.floor_plan.built_up }}</div>
         </div>
       </div>
       <div class="col-md-12 "></div>
       <div class="col-md-6 padtop4 row white10">
         {{ range $index, $element := sort .Site.Data.floor_plan "weight" }}
-            <div class="col-md-10 col-xs-11 card">
+            <div class="col-md-9 col-xs-11 card">
               <div class="row">
                 <div class="col-md-8 col-xs-8">
                   <div class="vcenter">
@@ -30,7 +30,23 @@
           {{ end }}
       </div>
       <div class="col-md-6 white-bb">
-        <img src="{{ .Site.Params.floor_plan.floor_plan }}" alt="" class="img-responsive">
+        {{ $webp := printf "./img/%s.webp" .Site.Params.floor_plan.floor_plan }}
+        {{ $imagePath := printf "/img/%s.png" .Site.Params.floor_plan.floor_plan }}
+        {{- $asset := resources.Get $imagePath -}}
+        {{ $tiny := ($asset.Resize "400x q90") }}
+        {{ $small := ($asset.Resize "600x q90") }}
+        {{ $medium := ($asset.Resize "700x q90") }}
+        {{ $large := ($asset.Resize "900x q90") }}
+        <picture>
+          <source srcset="{{ $webp }}" type="image/webp">
+          <img 
+          srcset="
+          {{- with $tiny.RelPermalink -}}{{.}} 200w{{- end -}}
+          {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
+          {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
+          {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}"
+          img src="{{ $small.RelPermalink }}" alt="" class="img-responsive">
+        <picture>
       </div>
     </div>
   </div>

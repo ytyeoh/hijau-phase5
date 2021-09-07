@@ -8,9 +8,19 @@
                     <div class="item boxsha">
                         <div class="row">
                             <div class="col-sm-12 ">
-                                <a href="{{ .img }}" data-lightbox="specifications">
-                                <img class="img-responsive" src="{{ .img }}" alt="">
-                                </a>
+                                {{ $webp := printf "./img/%s.webp" .img }}
+                                {{ $imagePath := printf "/img/%s.png" .img }}
+                                {{- $asset := resources.Get $imagePath -}}
+                                {{ $tiny := ($asset.Resize "400x q90") }}
+                                {{ $small := ($asset.Resize "600x q90") }}
+                                {{ $medium := ($asset.Resize "700x q90") }}
+                                {{ $large := ($asset.Resize "900x q90") }}
+                                <picture>
+                                  <source srcset="{{ $webp }}" type="image/webp">
+                                    <a href="{{ $webp }}" data-lightbox="specifications">
+                                      <img src="{{ $webp }}" alt="" class="img-responsive">
+                                    </a>
+                                <picture>
                             </div>
                         </div>
                     </div>

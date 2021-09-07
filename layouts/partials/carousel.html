@@ -4,7 +4,7 @@
 <section class="mar0 home bg-light-grey">
     <div class="home-carousel">
             <div class=" row">
-                <div class="col col-sm-6 col-xs-12 col-sm-push-6 bg-light-grey mpad0">
+                <div class="col col-sm-5 col-xs-12 col-sm-push-7 bg-light-grey mpad0">
                     <div class="lll">
                         <div class=" ll2">
                             <div class="row">
@@ -27,13 +27,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="col col-sm-6 col-xs-12 col-sm-pull-6 mpad0">
+                <div class="col col-sm-7 col-xs-12 col-sm-pull-5 mpad0 rmb10">
                     <div class="homepage owl-carousel" id="home-page">
                         {{ range sort .Site.Data.carousel "weight" }}
                         <div class="item">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <img class="img-responsive" src="{{ .image }}" alt="">
+                                    {{ $imagePath := printf "/images/%s.jpg" .image }}
+                                    {{ $webp := printf "./images/%s.webp" .image }}
+                                    {{- $asset := resources.Get $imagePath -}}
+                                    {{ $tiny := ($asset.Resize "400x q90") }}
+                                    {{ $small := ($asset.Resize "600x q90") }}
+                                    {{ $medium := ($asset.Resize "700x q90") }}
+                                    {{ $large := ($asset.Resize "900x q90") }}
+                                    <picture>
+                                      <source srcset="{{ $webp }}" type="image/webp">
+                                      <img 
+                                      srcset="
+                                      {{- with $tiny.RelPermalink -}}{{.}} 200w{{- end -}}
+                                      {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
+                                      {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
+                                      {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}"
+                                      img src="{{ $small.RelPermalink }}" alt="" class="img-responsive">
+                                    <picture>
                                 </div>
                             </div>
                         </div>

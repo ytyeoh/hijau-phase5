@@ -17,8 +17,8 @@
 
             {{range .sub}}
               <div class="col-md-8 col-xs-6">{{.name}}</div>
-              <div class="col-md-3 col-xs-3 view-sm">{{.time}} mins</div>
-              <div class="col-md-3 col-xs-3 align-right">+-{{.distance}}</div>
+              
+              <div class="col-md-4 col-xs-3 align-right flex-inline">+-<span class="distance">{{.distance}}</span>km</div>
             {{end}}
             </div>
         </div>

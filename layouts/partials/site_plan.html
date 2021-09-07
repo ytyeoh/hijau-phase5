@@ -1,6 +1,6 @@
-<section id="site-plan" id="location">
-  <div class="row">
-    <div class="col-md-3 bg-light-grey pad0 align-center align-left-m col-md-push-9">
+<section id="site-plan" id="location" class="bg-light-grey">
+  <div class="row display-flex">
+    <div class="col-md-3 col-xs-12 bg-light-grey pad0 align-center align-left-m col-md-push-9">
       
       <div class="row">
         <div class="col-md-12 col-xs-6">
@@ -22,15 +22,52 @@
     </div>
     <div class="col-md-9 pad0 col-md-pull-3">
       <div id="image-zoom">
-        <img id="map" src="{{ .Site.Params.site_plan.img }}">
+        {{ $webp := printf "./img/%s.webp" .Site.Params.site_plan.img }}
+        {{ $imagePath := printf "/img/%s.png" .Site.Params.site_plan.img }}
+        {{- $asset := resources.Get $imagePath -}}
+        {{ $tiny := ($asset.Resize "400x q90") }}
+        {{ $small := ($asset.Resize "600x q90") }}
+        {{ $medium := ($asset.Resize "700x q90") }}
+        {{ $large := ($asset.Resize "900x q90") }}
+        <picture>
+          <source srcset="{{ $webp }}" type="image/webp">
+          <img 
+          srcset="
+          {{- with $tiny.RelPermalink -}}{{.}} 200w{{- end -}}
+          {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
+          {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
+          {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}"
+          img src="{{ $small.RelPermalink }}" id="map" alt="" class="img-responsive">
+        <picture>
       </div>
-      <div class="zoom-btn view-md">
+      <!-- <div class="zoom-btn view-md">
         <button type="button" onclick="zoomin()"><i class="fas fa-plus"></i></button>
         <button type="button" onclick="zoomout()"><i class="fas fa-minus"></i></button>
-      </div>
+      </div> -->
     </div>
-    <div class="col-md-6"><img src="{{ .Site.Params.site_plan.map1 }}" alt="" class="img-responsive"></div>
-    <div class="col-md-6"><img src="{{ .Site.Params.site_plan.map2 }}" alt="" class="img-responsive"></div>
+    <div class="col-md-6 white-back"> 
+      {{ $webp := printf "./img/%s.webp" .Site.Params.site_plan.map1 }}
+      {{ $imagePath := printf "/img/%s.png" .Site.Params.site_plan.map1 }}
+      {{- $asset := resources.Get $imagePath -}}
+      {{ $tiny := ($asset.Resize "400x q90") }}
+      {{ $small := ($asset.Resize "600x q90") }}
+      {{ $medium := ($asset.Resize "700x q90") }}
+      {{ $large := ($asset.Resize "900x q90") }}
+      <picture>
+        <source srcset="{{ $webp }}" type="image/webp">
+        <img 
+        srcset="
+        {{- with $tiny.RelPermalink -}}{{.}} 200w{{- end -}}
+        {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
+        {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
+        {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}"
+        img src="{{ $small.RelPermalink }}" alt="" class="img-responsive">
+      <picture>
+    </div>
+    <div class="col-md-6 white-back">
+      {{.Site.Params.site_plan.map2 |  safeHTML }}
+    
+     </div>
   </div>
 </section>
 <script>
@@ -39,9 +76,10 @@
   function zoomin() {
   var myImg = document.getElementById("map");
   var currWidth = myImg.clientWidth;
+  debugger;
   if (currWidth > 2500) return false;
   else {
-    myImg.style.width = (currWidth + 100) + "px";
+    myImg.clientWidth = (currWidth + 100) + "px";
   }
 }
 
@@ -49,6 +87,7 @@ function zoomout() {
   var myImg = document.getElementById("map");
   var currHeight = myImg.clientHeight;
   var currWidth = myImg.clientWidth;
+  debugger;
   if (currHeight < 600 || currWidth <= original_width ) return false;
   else {
     myImg.style.width = (currWidth - 100) + "px";

@@ -1,5 +1,5 @@
-title = "Notre-Dame de Paris"
-baseURL = "/"
+title = "Hijauan Valdor - Phase 6"
+baseURL = "https://dbpo.shinajii.com/hvp6"
 languageCode = "en-us"
 theme = "hugo-universal-theme"
 
@@ -39,13 +39,13 @@ paginate = 10
 
 [[menu.main]]
     identifier = "location"
-    name = "location"
+    name = "site plan"
     url  = "#site-plan"
     weight = 3
 
 [[menu.main]]
     identifier = "contact"
-    name = "Contact"
+    name = "Location"
     url  = "#footer"
     weight = 4
 [[menu.main]]
@@ -60,60 +60,15 @@ paginate = 10
     weight = 6
 
 
-
-# Top bar social links menu
-
-[[menu.topbar]]
-    weight = 1
-    name = "GitHub"
-    url = "https://github.com/devcows/hugo-universal-theme"
-    pre = "<i class='fab fa-2x fa-github'></i>"
-
-[[menu.topbar]]
-    weight = 2
-    name = "Facebook"
-    url = "http://facebook.com"
-    pre = "<i class='fab fa-2x fa-facebook'></i>"
-
-[[menu.topbar]]
-    weight = 3
-    name = "Twitter"
-    url = "http://twitter.com"
-    pre = "<i class='fab fa-2x fa-twitter'></i>"
-
-[[menu.topbar]]
-    weight = 4
-    name = "Email"
-    url = "mailto:your@email.com"
-    pre = "<i class='fas fa-2x fa-envelope'></i>"
-
-
 [params]
-    viewMorePostLink = "/blog/"
-    author = "DevCows"
-    defaultKeywords = ["devows", "hugo", "go"]
-    mainSections = ["blog"]
-    defaultDescription = "Site template made by devcows using hugo"
-
-    # Social media
-    facebook_site = "" # the Facebook handle of your site ('https://www.facebook.com/HANDLE')
-    twitter_site = "GoHugoIO" # the Twitter handle of your site (without the '@')
-    default_sharing_image = "img/sharing-default.png"
-
-    # Google Maps widget: If `googleMapsApiKey` is not set, no key will be passed to Google (which likely results in a broken map widget).
-    enableGoogleMaps = true
-    googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
-
-    latitude = "-12.043333"
-    longitude = "-77.028333"
 
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
     style = "default"
 
     # Enable the contact form by entering your Formspree.io endpoint url
-    formspree_action = "https://formspree.io/f/xleawnny"
+    formspree_action = "./email.php"
     contact_form_ajax = false
-
+    contact_title = "open for registration only"
     contact_us = "contact us"
     email = "enquiries@assasdunia.com"
 
@@ -123,7 +78,7 @@ paginate = 10
     logo = "img/logo.png"
     logo_small = "img/logo-small.png"
 
-    copyright= "*All drawings and illustrations herein are artist’s impressions only. All plans, specifications, measurements and information contained herein are subject to variations, amendments and changes as may be required by the relevant authorities or project architect without prior notification to purchase and cannot form part of an offer or contract.<br><br>COPYRIGHT © 2021 ASAS DUNIA BERHAD. ALL RIGHTS RESERVED."
+    copyright= "*All drawings and illustrations herein are artist’s impressions only. All plans, specifications, measurements and information contained herein are subject to variations, amendments and changes as may be required by the relevant authorities or project architect without prior notification to purchase and cannot form part of an offer or contract.<br>Developer License no. : 2687-61/07-2023/0579(L) Validity : 22.7.21-21.7.23 <br>Advertising and sales permit no. : 2687-61/07-2023/0579(P) Validity : 22.7.21-21.7.23 <br>Authority approving building plan : Majlis Bandaraya Seberang Perai<br>Building plan reference no. : MBSP/40/20-75/78<br>Expected date of completion : December 2023<br>Single Storey Terrace : 50 units<br>Price : RM430,000-RM577,150<br>Freehold,Free from encumbrances, 5% discount for Bumiputera<br>THIS ADVERTISEMENT HAS BEEN APPROVED BY THE MINISTRY OF HOUSING<br><br>COPYRIGHT © {year} ASAS DUNIA BERHAD. ALL RIGHTS RESERVED."
 
     download = "https://abc.com/doanload"
     book_now = "contact"
@@ -139,35 +94,18 @@ paginate = 10
     tel="04-563 3999"
     fax="04-563 1999"
 [params.floor_plan]
-    land_area= "19’x 71.85’"
-    built_up = "19’x 43.8’" 
-    floor_plan = "img/Floor_plan.png"
+    land_area= "19’ x 71.85’"
+    built_up = "19’ x 43.8’" 
+    floor_plan = "Floor_plan"
 [params.site_plan]
-    img = "img/Site_plan.png"
+    img = "Site_plan"
     icon = "low-den"
     digit = "50"
     quantity = "Units"
-    map1 = "img/map1.png"
-    map2 = "img/map2.png"
-  
-
-[permalinks]
-    blog = "/blog/:year/:month/:day/:filename/"
+    map1 = "map1"
+    map2 = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7946.255295997723!2d100.48926053094233!3d5.242633538182633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ab6e7868bb505%3A0x1b7aa7ac42067bf9!2s942-931%2C%20Jalan%2010%2C%20Perkampungan%20Valdor%2C%2014200%20Sungai%20Jawi%2C%20Pulau%20Pinang!5e0!3m2!1sen!2smy!4v1628072627763!5m2!1sen!2smy" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'
 
 # Enable or disable top bar with social icons
-[params.topbar]
-    enable = true
-    text = """<p class="hidden-sm hidden-xs">Contact us on +420 777 555 333 or hello@universal.com.</p>
-      <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
-      <a href="#" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
-      </p>
-      """
-
-# Enable and disable widgets for the right sidebar
-[params.widgets]
-    categories = true
-    tags = true
-    search = true
 
 [params.carousel]
     enable = true
@@ -181,18 +119,11 @@ paginate = 10
     # at 'exampleSite/data/features'.
     # For more informtion take a look at the README.
 
-[params.testimonials]
-    enable = false
-    # All fal are defined in their own files. You can find example items
-    # at 'exampleSite/data/testimonials'.
-    # For more informtion take a look at the README.
-    title = "Testimonials"
-    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
 
 [params.home]
     enable = true
     title = "phase 6"
-    subtitle = "FREEHOLD & GUARDED <br>Sungai Bakap"
+    subtitle = "Freehold & Guarded <br>Sungai Bakap"
     name = "iris"
     size = "1,365 sqft"
     type= "SINGLE STOREY <br> TERRACE HOUSE"
@@ -200,26 +131,6 @@ paginate = 10
 [params.description]
     title = "Peace and Tranquility, Enclaved in Greenery."   
     description = "<p>The dream of having a place of your own called home is made a reality with Iris. The single storey terrace homes (Iris) blooms within an established guarded community, Hijauan Valdor, rich with healthy flourishing greens, clusters of linear parks and luxury of space with its low density concept. </p><br><p>Iris in Hijauan Valdor, situated near the 2nd Penang Bridge for quick access to the Island, while also connected to matured township like Alma, Simpang Ampat, Sungai Bakap, Nibong Tebal and the fast-developing Batu Kawan, all providing easy accessibility to shopping malls, schools, employment, social and other daily needs. </p><br><p>All this can be yours without breaking your bank!</p>" 
-[params.see_more]
-    enable = true
-    icon = "far fa-file-alt"
-    title = "Do you want to see more?"
-    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
-    link_url = "#"
-    link_text = "Check other homepages"
-
-[params.clients]
-    enable = true
-    # All clients are defined in their own files. You can find example items
-    # at 'exampleSite/data/clients'.
-    # For more informtion take a look at the README.
-    title = "Our Clients"
-    subtitle = ""
-
-[params.recent_posts]
-    enable = true
-    title = "From our blog"
-    subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
 
 [params.access]
     [[params.access.main]]
@@ -227,87 +138,95 @@ paginate = 10
         icon = "book"
         [[params.access.main.sub]]
             name = "SMJK(C) Jit Sin 2"
-            distance = "2km"
+            distance = "6.0"
             time = "2"
         [[params.access.main.sub]]
             name = "SMK Valdor"
-            distance = "2km"
+            distance = "1.6"
             time = "2"
         [[params.access.main.sub]]
             name = "SJK(C) Kampung Valdorr"
-            distance = "2km"
+            distance = "1.8"
             time = "2"
     [[params.access.main]]
         name = "Access to Penang Island"
         icon = "bridge"
         [[params.access.main.sub]]
             name = "2nd Penang Bridge"
-            distance = "2km"
+            distance = "6.0"
             time = "2"
         [[params.access.main.sub]]
             name = "Penang Bridge"
-            distance = "2km"
+            distance = "18.0"
             time = "2"
     [[params.access.main]]
         name = "Markets"
         icon = "market"
         [[params.access.main.sub]]
             name = "Valdor Market"
-            distance = "2km"
+            distance = "2.3"
             time = "2"
         [[params.access.main.sub]]
             name = "TESCO"
-            distance = "2km"
+            distance = "9.0"
             time = "2"
         [[params.access.main.sub]]
             name = "JUSCO"
-            distance = "2km"
+            distance = "9.0"
             time = "2"
     [[params.access.main]]
         name = "Neighbouring Township"
         icon = "township"
         [[params.access.main.sub]]
             name = "Batu Kawan"
-            distance = "2km"
+            distance = "6.0"
             time = "2"
         [[params.access.main.sub]]
             name = "Bukit Mertajam"
-            distance = "2km"
+            distance = "16.0"
             time = "2"
         [[params.access.main.sub]]
             name = "Alma"
-            distance = "2km"
+            distance = "10.0"
             time = "2"
         [[params.access.main.sub]]
             name = "Simpang Ampat"
-            distance = "2km"
+            distance = "4.7"
             time = "2"
         [[params.access.main.sub]]
             name = "Sungai Bakap"
-            distance = "2km"
+            distance = "2.0"
             time = "2"
         [[params.access.main.sub]]
             name = "Nibong Tebal"
-            distance = "2km"
+            distance = "9.0"
             time = "2"
 [params.gallery]
     [[params.gallery.img]]
-    img = "/img/gallery/IRIS-5.png"
+    img = "4"
     [[params.gallery.img]]
-    img = "/img/gallery/IRIS-6.png"
+    img = "5"
     [[params.gallery.img]]
-    img = "/img/gallery/IRIS-7.png"
+    img = "6"
     [[params.gallery.img]]
-    img = "/img/gallery/IRIS-8.png"
+    img = "7"
     [[params.gallery.img]]
-    img = "/img/gallery/IRIS-9.png"
+    img = "8"
+    [[params.gallery.img]]
+    img = "9"
+    [[params.gallery.img]]
+    img = "10"
 
 [params.specifications]
     [[params.specifications.img]]
-    img = "/img/text.png"
+    img = "text"
     [[params.specifications.img]]
-    img = "/img/text 2.png"
+    img = "text2"
     [[params.specifications.img]]
-    img = "/img/text.png"
+    img = "text3"
     [[params.specifications.img]]
-    img = "/img/text 2.png"
+    img = "text4"
+    [[params.specifications.img]]
+    img = "text5"
+    [[params.specifications.img]]
+    img = "text6"
