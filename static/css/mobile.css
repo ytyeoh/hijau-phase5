@@ -5,7 +5,7 @@
   }
   .navbar-toggle {
     display: block;
-}
+  }
   .bd-example .fixed-top, .bd-example .sticky-top {
       position: static;
       margin: -1rem -1rem 1rem;
@@ -26,7 +26,7 @@
     background: #3A3933;
     color: #ffffff;
     border-color: #3A3933;
-}
+  }
   .container{
     padding: 0;
   }
@@ -34,7 +34,7 @@
     padding-top: 7.5rem;
   }
   .home-carousel{
-    padding-top: 1rem;
+    padding-top: 3rem;
   }
   .view-sm{
     display: block!important;
@@ -147,7 +147,6 @@
     font-weight: 900;
     color: #989689;
     text-align: left;
-    padding-left: 1rem;
   }
 
   .aa{
@@ -185,6 +184,12 @@
     border-top: 2px solid white;
   }
   /*about*/
+  #about .owl-pagination {
+    margin: auto;
+    margin: auto;
+    position: absolute;
+    left: 0; bottom: 1em; right: 0;
+  }
   .ll3 {
     text-align: left;
     padding: 0;
@@ -209,6 +214,10 @@
   #floor-plan{
     background: #EAEAEA;
     font-size: 2rem;
+  }
+  .lrmargin1{
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .digit{
     font-size:45px;
@@ -272,18 +281,34 @@
   #site-plan .svg{
     min-height: 60px;
   }
+  .map{
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    min-height: 375px;
+  }
+
   #image-zoom {
     max-height: 300px;
   }
   #accessibility{
     font-size: 1rem;
   }
-  #accessibility p{
+  #accessibility p,h3{
     padding-left: 1rem;
   }
   #accessibility .same-height{
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+  #accessibility h4 {
+    padding-bottom: 1em;
+  }
+  #accessibility .right-display{
+    padding-left: 30%;
+  }
+  #specifications .home-carousel .owl-theme .owl-controls .owl-page.active span {
+    background: #000;
   }
   #copyright .col-xs-2{
     width: 20%;

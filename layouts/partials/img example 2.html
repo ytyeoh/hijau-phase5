@@ -1,0 +1,6 @@
+ {{ $imagePath := printf "/img/%s" .Site.Params.thumbnail }}
+        {{- $asset := resources.Get $imagePath -}}
+        {{ $img := $asset.Fit "200x200" }}
+<figure class="image is-3by2">
+  <img alt="Yellow Duck" src="{{ $img.RelPermalink }}" />
+</figure>
