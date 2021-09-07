@@ -1,6 +1,7 @@
 @media only screen and (max-width: 981px) {
-  .navbar-collapse.collapse {
-    display: none!important;
+  .navbar{
+    min-height: 62px;
+    max-height: 1000px;
   }
   .navbar-toggle {
     display: block;
