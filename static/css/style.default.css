@@ -312,7 +312,7 @@ ul.list-style-none {
   font-weight: bold;
   letter-spacing: 0.08em;
   border-top: solid 5px transparent;
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #fff;
 }
 
@@ -1179,7 +1179,7 @@ fieldset[disabled] .btn-template-primary.active {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-.home-carousel .owl-theme .owl-controls .owl-page span {
+.home-carousel  .owl-theme .owl-controls .owl-page span , #specifications .owl-theme .owl-controls .owl-page span {
   background: #666;
 }
 .home-carousel .owl-theme .owl-controls .owl-page.active span {
@@ -2538,6 +2538,7 @@ fieldset[disabled] .btn-template-primary.active {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #70A132;
+  text-align: center;
 }
 #footer ul {
   padding-left: 0;

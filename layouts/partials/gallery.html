@@ -1,36 +1,30 @@
 <section id="gallery" class="bg-light-grey">
     <div class="home-carousel container">
-             <div class=" row">
+            <div class=" row">
                 <div class="col  col-xs-12 ">
                     <h3 class="secondary-text">Gallery</h3>
-                </div> 
                 <div class="gallery owl-carouse bg-light-greyl" id="desciption-page" id="ggg">
                     {{ range .Site.Params.gallery.img }}
                     <div class="item boxsha">
                         <div class="row">
                             <div class="col-sm-12">
-                                    {{ $webp := printf "./img/gallery/%s.webp" .img }}
-                                    {{ $imagePath := printf "/img/gallery/%s.jpg" .img }}
-                                    {{- $asset := resources.Get $imagePath -}}
-                                    {{ $tiny := ($asset.Resize "400x q90") }}
-                                    {{ $small := ($asset.Resize "600x q90") }}
-                                    {{ $medium := ($asset.Resize "700x q90") }}
-                                    {{ $large := ($asset.Resize "900x q90") }}
-                                    <picture>
-                                     
-                                      <a href="{{ $webp }}" data-lightbox="gallery">
-                                         <source srcset="{{ $webp }}" type="image/webp">
-                                          <img src="{{ $webp }}" alt="" class="img-responsive">
-                                      </a>
-                                    <picture>
+                              {{ $webp := printf "./img/gallery/%s.webp" .img }}
+                              {{ $imagePath := printf "/img/gallery/%s.jpg" .img }}
+                              {{- $asset := resources.Get $imagePath -}}
+                              {{ $tiny := ($asset.Resize "400x q90") }}
+                              {{ $small := ($asset.Resize "600x q90") }}
+                              {{ $medium := ($asset.Resize "700x q90") }}
+                              {{ $large := ($asset.Resize "900x q90") }}
+                              <picture>
+                                <a href="{{ $webp }}" data-lightbox="gallery"><source srcset="{{ $webp }}" type="image/webp"><img src="{{ $webp }}" alt="" class="img-responsive"></a>
+                              </picture>
                             </div>
                         </div>
                     </div>
                     {{ end }}
                 </div>  
-                             
+                </div>       
             </div>
             <!-- /.project owl-slider -->
-        </div>
     </div>
 </section>
