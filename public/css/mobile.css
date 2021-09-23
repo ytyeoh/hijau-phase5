@@ -200,6 +200,7 @@
   .green{
     border-width: 1px;
     margin-right: 25%;
+    padding-bottom: 0;
   }
   .box-fea {
     padding: 5rem 3rem;

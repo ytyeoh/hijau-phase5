@@ -2,31 +2,28 @@
     <div class="home-carousel container">
              <div class=" row">
                 <div class="col  col-xs-12 ">
-                    <h3 class="secondary-text">SPECIFICATIONS</h3>
-                <div class="specifications owl-carouse bg-light-greyl" id="desciption-page" id="ggg">
-                    {{ range .Site.Params.specifications.img }}
-                    <div class="item boxsha">
-                        <div class="row">
-                            <div class="col-sm-12 ">
-                                {{ $webp := printf "./img/%s.webp" .img }}
-                                {{ $imagePath := printf "/img/%s.png" .img }}
-                                {{- $asset := resources.Get $imagePath -}}
-                                {{ $tiny := ($asset.Resize "400x q90") }}
-                                {{ $small := ($asset.Resize "600x q90") }}
-                                {{ $medium := ($asset.Resize "700x q90") }}
-                                {{ $large := ($asset.Resize "900x q90") }}
-                                <picture>
-                                  <source srcset="{{ $webp }}" type="image/webp">
-                                    <a href="{{ $webp }}" data-lightbox="specifications">
-                                      <img src="{{ $webp }}" alt="" class="img-responsive">
-                                    </a>
-                                <picture>
-                            </div>
+                  <h3 class="secondary-text">SPECIFICATIONS</h3>
+                </div>
+                <div class="col col-xs-12 image-box">
+                <div class="specifications image-box owl-carouse bg-light-greyl" id="desciption-page" id="ggg">
+                {{ range .Site.Params.specifications.img }}
+                <div class="item boxsha">
+                    <div class="row">
+                        <div class="col-sm-12 ">
+                            {{ $webp := printf "./img/%s.webp" .img }}
+                            {{ $imagePath := printf "/img/%s.png" .img }}
+                            {{- $asset := resources.Get $imagePath -}}
+                            {{ $tiny := ($asset.Resize "400x q90") }}
+                            {{ $small := ($asset.Resize "600x q90") }}
+                            {{ $medium := ($asset.Resize "700x q90") }}
+                            {{ $large := ($asset.Resize "900x q90") }}
+                            <picture>
+                              <source srcset="{{ $webp }}" type="image/webp"><a href="{{ $webp }}" data-lightbox="specifications"><img src="{{ $webp }}" alt="" class="img-responsive"></a>
+                            <picture>
                         </div>
                     </div>
-                    {{ end }}
-                </div>  
-                </div>              
+                </div>
+                {{ end }}             
             </div>
             <!-- /.project owl-slider -->
         </div>

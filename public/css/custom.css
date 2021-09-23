@@ -183,6 +183,7 @@ nav{
 .green{
   border-top: 5px solid #71a132;
   left: 15px;
+  padding-bottom: 1em;
 }
 .fa, .fas {
   font-weight: 700;
@@ -313,6 +314,9 @@ nav{
 #gallery .boxsha{
   margin: 1em;
   border-radius: 2rem;
+}
+.image-box{
+  margin-left: -1em;
 }
 /*specifications*/
 #specifications .boxsha{

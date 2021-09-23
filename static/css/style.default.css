@@ -2538,7 +2538,7 @@ fieldset[disabled] .btn-template-primary.active {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #70A132;
-  text-align: center;
+  text-align: left;
 }
 #footer ul {
   padding-left: 0;
